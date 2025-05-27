@@ -3,7 +3,15 @@
    "how to change link color." */
 
 body {
-  background-color: white;
-  color: black;
-  font-family: Verdana;
+  background-image: url(bliss.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  padding: 1rem 0 0 1rem;
+}
+
+@media (min-width: 800px) {
+  body {
+    max-width: 800px;
+    margin: auto;
+  }
 }
