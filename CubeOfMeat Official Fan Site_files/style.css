@@ -3,10 +3,10 @@
    "how to change link color." */
 
 body {
-  background-image: url(resources/bliss.jpg);
+  background-image: url(bliss.jpg);
   background-position: top;
   background-repeat: no-repeat;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0 0 1rem;
 }
 
 @media (min-width: 800px) {

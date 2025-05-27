@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CubeOfMeat Official Fan Site</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/resources/cubeofmeat.png">
   <link rel="stylesheet" href="https://unpkg.com/xp.css" />
   <link rel="stylesheet" href="/style.css" type="text/css" media="all">
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -15,16 +16,23 @@
     <div class="title-bar">
       <div class="title-bar-text">CubeOfMeat</div>
       <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close"></button>
       </div>
     </div>
     <div class="window-body">
-      <p>Hello world! Today I was born!</p>
-      <section class="field-row" style="justify-content: flex-end">
-        <button>Yes</button>
-      </section>
+      <menu role="tablist">
+        <button aria-selected="true" aria-controls="main" onclick="handleToMain()">Main</button>
+        <button aria-controls="games" onclick="handleToGames()">Games</button>
+        <button aria-controls="other" onclick="handleToOther()">Other</button>
+      </menu>
+      <article role="tabpanel" id="main">
+        stuff here
+      </article>
+      <article role="tabpanel" hidden id="games">
+        game stuff here
+      </article>
+      <article role="tabpanel" hidden id="other">
+        more stuff here
+      </article>
     </div>
 
 </html>
