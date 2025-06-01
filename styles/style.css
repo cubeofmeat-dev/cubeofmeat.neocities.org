@@ -1,5 +1,5 @@
 body {
-  background-image: url(resources/bliss.jpg);
+  background-image: url(/resources/bliss.jpg);
   background-position: top;
   background-repeat: no-repeat;
   padding: 1rem 0 1rem 0;
