@@ -1,21 +1,25 @@
 /* MAIN FUNCTIONS */
 function handleMinimize(clickedId) {
+    console.log('Minimizing:', clickedId);
     var prefix = clickedId.substring(0, clickedId.indexOf('-'));
     document.getElementById(prefix + '-body').style.display = 'none';
 }
 
 function handleRestore(clickedId) {
+    console.log('Restoring:', clickedId);
     var prefix = clickedId.substring(0, clickedId.indexOf('-'));
     document.getElementById(prefix + '-body').style.display = 'block';
 }
 
 function handleClose(clickedId) {
+    console.log('Closing:', clickedId);
     var prefix = clickedId.substring(0, clickedId.indexOf('-'));
     document.getElementById(prefix + '-window').remove();
 }
 
 /* NAVIGATION FUNCTIONS */
 function handleTabClicked(clickedId) {
+    console.log('Tab clicked:', clickedId);
     var prefix = clickedId.substring(0, clickedId.indexOf('-'));
     var tab = document.getElementById(prefix + '-article');
     var tabs = document.querySelectorAll('article');
