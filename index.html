@@ -12,27 +12,49 @@
 </head>
 
 <body>
-  <div class="window">
+  <div id="main-window" class="window">
     <div class="title-bar">
       <div class="title-bar-text">CubeOfMeat Official Fan Site</div>
       <div class="title-bar-controls">
+        <button id="main-minimize" aria-label="Minimize" onclick="handleMinimize(this.id)"></button>
+        <button id="main-Restore" aria-label="Restore" onclick="handleRestore(this.id)"></button>
+        <button id="main-close" aria-label="Close" onclick="handleClose(this.id)"></button>
       </div>
     </div>
-    <div class="window-body">
+    <div id="main-body" class="window-body">
       <menu role="tablist">
-        <button aria-selected="true" aria-controls="main" onclick="handleToMain()">Main</button>
-        <button aria-controls="games" onclick="handleToGames()">Games</button>
-        <button aria-controls="other" onclick="handleToOther()">Other</button>
+        <button id="main-tab" aria-controls="main" aria-selected="true"
+          onclick="handleTabClicked(this.id)">Main</button>
+        <button id="games-tab" aria-controls="games" onclick="handleTabClicked(this.id)">Games</button>
+        <button id="other-tab" aria-controls="other" onclick="handleTabClicked(this.id)">Other</button>
       </menu>
-      <article role="tabpanel" id="main">
-        stuff here
+      <article id="main-article" role="tabpanel">
+        <div id="main-article-content">
+          <table>
+            <td>
+              <img src="resources/cubeofmeat.png" alt="CubeOfMeat Logo">
+            </td>
+            <td>
+              <p>Hello, I am CubeOfMeat. I like gaming, software development, and music. I like to post about the games
+                that I play, as well as a sort of dev blog for upcoming games and projects (including this site). You
+                can navigate the site to
+                see my reviews and other content using the tabs above. Feel free to drop a message in the guest book
+                below!</p>
+            </td>
+          </table>
+        </div>
       </article>
-      <article role="tabpanel" hidden id="games">
+      <article id="games-article" role="tabpanel" hidden>
         game stuff here
       </article>
-      <article role="tabpanel" hidden id="other">
+      <article id="other-article" role="tabpanel" hidden>
         more stuff here
       </article>
+      <div class="status-bar">
+        <div class="status-bar-field">CubeOfMeat</div>
+        <div class="status-bar-field"><a href="https://cubeofmeat.atabook.org/">Guest Book</a></div>
+        <div class="status-bar-field"><a href="https://github.com/cubeofmeat-dev">GitHub</div>
+      </div>
     </div>
 
 </html>

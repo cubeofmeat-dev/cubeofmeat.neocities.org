@@ -15,3 +15,19 @@ body {
     margin: auto;
   }
 }
+
+#main-article-content table {
+  margin: auto;
+}
+
+#main-article-content img {
+  width: 100px;
+}
+
+/* div.window {
+  position: absolute;
+}
+
+div.window.title-bar {
+  cursor: move;
+} */
