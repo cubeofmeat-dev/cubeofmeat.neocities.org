@@ -1,32 +1,35 @@
 /* MAIN FUNCTIONS */
 function handleMinimize(clickedId) {
-    console.log('Minimizing:', clickedId);
     var prefix = clickedId.substring(0, clickedId.indexOf('-'));
     document.getElementById(prefix + '-body').style.display = 'none';
 }
 
 function handleRestore(clickedId) {
-    console.log('Restoring:', clickedId);
     var prefix = clickedId.substring(0, clickedId.indexOf('-'));
     document.getElementById(prefix + '-body').style.display = 'block';
 }
 
 function handleClose(clickedId) {
-    console.log('Closing:', clickedId);
     var prefix = clickedId.substring(0, clickedId.indexOf('-'));
     document.getElementById(prefix + '-window').remove();
 }
 
 /* NAVIGATION FUNCTIONS */
 function handleTabClicked(clickedId) {
-    console.log('Tab clicked:', clickedId);
-    var prefix = clickedId.substring(0, clickedId.indexOf('-'));
-    var tab = document.getElementById(prefix + '-article');
-    var tabs = document.querySelectorAll('article');
-    for (var i = 0; i < tabs.length; i++) {
-        tabs[i].setAttribute('hidden', true);
+    var buttons = document.querySelectorAll('[id$="-tab"]');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].setAttribute('aria-selected', false);
     }
-    tab.removeAttribute('hidden');
+    var selectedTab = document.getElementById(clickedId);
+    selectedTab.setAttribute('aria-selected', true);
+
+    var prefix = clickedId.substring(0, clickedId.indexOf('-'));
+    var selectedArticle = document.getElementById(prefix + '-article');
+    var articles = document.querySelectorAll('article');
+    for (var i = 0; i < articles.length; i++) {
+        articles[i].setAttribute('hidden', true);
+    }
+    selectedArticle.removeAttribute('hidden');
 }
 
 /* DRAGGABLE ELEMENT */
