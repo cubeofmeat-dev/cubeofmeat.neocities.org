@@ -3,6 +3,13 @@ body {
   background-position: top;
   background-repeat: no-repeat;
   padding: 1rem 0 1rem 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p,
+a,
+button {
+  font-size: 12px !important;
 }
 
 @media (min-width: 800px) {
@@ -19,6 +26,7 @@ body {
 #cubeofmeat-logo {
   max-width: 100px;
 }
+
 
 /* div.window {
   position: absolute;
