@@ -35,12 +35,3 @@ span.spoiler {
 span.spoiler:hover {
   filter: blur(0);
 }
-
-
-/* div.window {
-  position: absolute;
-}
-
-div.window.title-bar {
-  cursor: move;
-} */
