@@ -27,6 +27,15 @@ button {
   max-width: 100px;
 }
 
+span.spoiler {
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+}
+
+span.spoiler:hover {
+  filter: blur(0);
+}
+
 
 /* div.window {
   position: absolute;
